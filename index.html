@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth [scroll-padding-top:1rem]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z-Learn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('img/bg-space.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: scroll;
+      background-size: 100% auto; 
+    }
+
+    .text-glow {
+      color: #fff;
+      text-shadow:
+        0 0 2px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff;
+    }
+  </style>
+</head>
+<body class="min-h-screen overflow-x-hidden text-white relative">
+
+  <nav class="w-full fixed top-0 left-0 z-50 bg-transparent backdrop-blur-sm px-8 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <img class="h-10 w-20" src="img/zlearn vers putih.png" alt="logo">
+      <div class="hidden md:flex space-x-10 text-lg font-medium items-center">
+        <a href="#" class="hover:text-indigo-300 transition">Home</a>
+        <a href="#summarize" class="hover:text-indigo-300 transition">Summarize</a>
+        <a href="StudyHall.html" class="hover:text-indigo-300 transition">Study Hall</a>
+        <a href="#" class="hover:text-indigo-300 transition">Coursy</a>
+        <a href="Login.html" class="bg-gradient-to-r from-purple-900 to-purple-600 text-white px-5 py-2 rounded-tl-3xl rounded-br-3xl text-lg font-semibold shadow-md hover:opacity-90 transition">Join/Start</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex items-center justify-center min-h-[120vh]">
+    <h1 class="text-4xl md:text-8xl font-extrabold text-center text-glow text-white drop-shadow-lg px-4 tracking-wider">
+      YOUR JOURNEY<br />STARTS NOW
+    </h1>
+  </div>
+
+  <img class="relative top-10 w-full h-full max-w-full max-h-full" src="img/Gradient Bar.png" alt="">
+
+  <img class="absolute top-[1200px] right-[10rem] w-32 md:w-80 z-20" src="img/Serdadu Comet.png" alt="">
+
+  <section class="relative mt-10 py-20 px-4 md:px-10 z-10 bg-gradient-to-b from-[#0A0B1C] via-[#0A1936] to-[#0E2148]">
+    <h2 class="text-2xl mt-60 md:text-3xl font-bold text-center mb-12 text-white">
+      Featured Learning Videos
+    </h2>
+
+    <img class="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto max-w-full max-h-full object-contain -z-10 pointer-events-none" src="img/saturnus.png" alt="bg-saturnus">
+
+    <div class="flex mt-20 mb-[500px] flex-row flex-wrap items-center justify-center gap-6 md:gap-20">
+
+      <!--ini card yeah-->
+      <div class="bg-white bg-opacity-5 rounded-2xl shadow-lg backdrop-blur-md overflow-hidden w-92 transition-transform duration-300 transform hover:scale-105">
+        <div class="relative">
+          <img src="img/thumbnail.png" alt="Video Thumbnail" class="w-full h-auto" />
+          <span class="absolute top-2 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+        </div>
+        <div class="p-4 bg-[#0f172a]">
+          <h3 class="text-white font-semibold">Karyawan vs Pengusaha</h3>
+          <div class="flex gap-2 mt-2">
+            <span class="bg-cyan-600 text-white text-xs px-2 py-1 rounded">Business</span>
+            <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded">Beginner</span>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-black text-sm font-semibold py-1 rounded">Detail</button>
+        </div>
+      </div>
+
+      <div class="bg-white bg-opacity-5 rounded-2xl shadow-lg backdrop-blur-md overflow-hidden w-92 transition-transform duration-300 transform hover:scale-105">
+        <div class="relative">
+          <img src="img/actor2.png" alt="Video Thumbnail" class="w-full h-auto" />
+          <span class="absolute top-2 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+        </div>
+        <div class="p-4 bg-[#0f172a]">
+          <h3 class="text-white font-semibold">Support and Resistance Fundamental</h3>
+          <div class="flex gap-2 mt-2">
+            <span class="bg-cyan-600 text-white text-xs px-2 py-1 rounded">Analyst</span>
+            <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded">Beginner</span>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-black text-sm font-semibold py-1 rounded">Detail</button>
+        </div>
+      </div>
+
+      <div class="bg-white bg-opacity-5 rounded-2xl shadow-lg backdrop-blur-md overflow-hidden w-92 transition-transform duration-300 transform hover:scale-105">
+        <div class="relative">
+          <img src="img/actor3.png" alt="Video Thumbnail" class="w-full h-auto" />
+          <span class="absolute top-2 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+        </div>
+        <div class="p-4 bg-[#0f172a]">
+          <h3 class="text-white font-semibold">Cara Mengembangkan Algoritma</h3>
+          <div class="flex gap-2 mt-2">
+            <span class="bg-cyan-600 text-white text-xs px-2 py-1 rounded">Kognitif</span>
+            <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded">Beginner</span>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-black text-sm font-semibold py-1 rounded">Detail</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="summarize" class="relative z-10 bg-gradient-to-b from-[#0E2148] via-[#1b1f48] to-[#0E2148] p-80">
+    <div>
+      <img class="absolute inset-0 w-full h-full object-cover -z-10 pointer-events-none" src="img/bg-bintang berteman.png" alt="">
+
+      <div class="relative z-10 flex flex-col items-center space-y-6">
+        <h1 class="text-4xl mt-40 font-bold">Summarize</h1>
+        <p class="text-center font-bold text-md text-white">
+        Upload your file here, and let our AI assistant generate a smart, concise summary for you!
+        </p>
+
+        <div class="w-[700px] h-[500px] max-w-[90vw] p-1 bg-gradient-to-br from-purple-700 to-indigo-900 rounded-xl shadow-lg">
+          <div class="bg-[#271056] h-full p-8 rounded-lg flex flex-col justify-between items-center">
+          
+            <div class="border-2 border-dashed border-purple-300 flex-1 w-full flex justify-center items-center text-center text-white rounded-md cursor-pointer hover:bg-indigo-800 transition px-4">
+              <div>
+                <img src="img/export.png" class="h-10 w-10 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a1 1 0 001 1h3m10-2v2a1 1 0 001 1h3m-8-6l-4-4m0 0l-4 4m4-4v12" />
+                </img>
+                <p>Drag and drop your file here or choose file</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-300 mt-4">Maximum size: 25MB</p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-6 left-20">
+          <img src="img/section 3.png" alt="Astronaut" class="w-54 h-54" />
+        </div>
+        <div>
+          <a href="StudyHall.html" class="mt-4 px-6 py-2 rounded-full bg-purple-700 hover:bg-purple-800 transition text-sm font-semibold shadow-md">
+            Go to your summarize
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img class="" src="img/footerrrrr.png" alt="">
+  </footer>
+
+</body>
+</html>

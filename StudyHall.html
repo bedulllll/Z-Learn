@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z-Learn Summary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #a78bfa;
+      border-radius: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background-color: rgba(168, 139, 250, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#0E2148] via-[#1b1f48] to-[#0E2148] text-white relative">
+
+  <!-- Bg studihallenlay -->
+  <div class="fixed inset-0 -z-10">
+    <img src="img/bg-studyhall.png" class="w-full h-full object-cover" alt="Background" />
+  </div>
+
+  <nav class="w-full fixed top-0 left-0 z-50 bg-transparent px-8 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <img class="h-10 w-20" src="img/zlearn vers putih.png" alt="logo">
+      <div class="hidden md:flex space-x-10 text-lg font-medium items-center">
+        <a href="index.html" class="font-bold hover:text-indigo-300 transition">Home</a>
+        <a href="index.html#summarize" class="font-bold hover:text-indigo-300 transition">Summarize</a>
+        <a href="#" class="font-bold hover:text-indigo-300 transition">Study Hall</a>
+        <a href="#" class="font-bold hover:text-indigo-300 transition">Coursy</a>
+        <a href="profile user">
+         <img src="img/icon.png" alt="User Icon" class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex pt-24">
+
+   <aside class="hidden md:flex fixed top-24 left-0 h-[calc(90vh-4rem)] w-[18%] bg-[#2c2b5d] flex-col items-center text-white z-40 overflow-y-auto rounded-tr-3xl rounded-br-3xl shadow-lg">
+       <div class="w-full relative z-40 "> 
+            <img src="img/Astronot duduk.png" class="absolute top right-2 z-50 w-20" />
+            <div class="bg-[#483AA0] w-full text-center py-3">
+                <div class="text-xl font-bold">Controls</div>
+            </div>
+        </div>
+
+
+        <div class="mt-6 text-center">
+            <p class="text-md font-bold mb-2">Your progress</p>
+            <div class="relative w-24 h-24 mx-auto mb-4">
+                <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#1c1a4f" stroke-width="4" />
+                    <circle id="progress-path" cx="18" cy="18" r="15.9155" fill="none" stroke="#ffffff" stroke-width="4"
+                            stroke-dasharray="100, 100" stroke-dashoffset="0" transform="rotate(-90 18 18)" />
+                </svg>
+                <div id="progress-text" class="absolute inset-0 flex items-center justify-center text-lg font-bold">0%</div>
+            </div>
+
+        </div>
+
+        <div class="relative bg-[#1f1d3b] rounded-xl py-12 px-4 w-48 mb-4 text-center">
+            <div id="timer" class="text-2xl font-mono mb-2">00 : 00</div>
+            <div class="flex justify-between px-10 gap-3 text-xl">
+                <button id="play-btn">▶</button>
+                <button id="reset-btn">↻</button>
+            </div>
+ 
+            <img src="img/Astronot Mengejar Bintang timer.png" class="absolute -bottom-4 -right-4 w-16 z-20" />
+        </div>
+
+        <div class="relative bg-[#1f1d3b] rounded-xl mt-4 py-8 px-4 w-48 text-center">
+        <p class="text-xl font-semibold">o,Tuan</p>
+        <p class="text-xl italic text-gray-300 mb-2">Feast.</p>
+
+        <div class="flex justify-center gap-6 text-lg relative z-10">
+            <button>⏮️</button>
+            <button>⏯️</button>
+            <button>⏭️</button>
+        </div>
+
+        <img src="img/Astronot jatuh lagu.png" class="absolute right-32 w-20 z-10" />
+        </div>
+    </aside>
+
+
+    <main class="md:ml-[18%] w-full flex-1 p-6 overflow-y-auto scrollbar-thin">
+      <h1 class="text-3xl font-bold mb-2">Summarize</h1>
+      <p class="text-lg font-medium text-purple-300 mb-4">Your summary is here!!</p>
+
+      <div id="summary-content" class="bg-[#2e2d6b]/70 p-6 rounded-xl max-h-[75vh] overflow-y-auto backdrop-blur-md">
+        <p><strong>Dasar-Dasar SQL:</strong> Mengambil Data dengan SELECT, FROM, dan WHERE</p>
+        <p><strong>Ringkasan Inti:</strong> SQL (Structured Query Language) adalah bahasa standar yang digunakan untuk mengelola dan memanipulasi data dalam sebuah database...</p>
+
+        <h2 class="text-xl font-semibold text-purple-300 mt-4">Poin-Poin Kunci yang Diperdalam:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>SELECT:</strong> Menentukan Kolom yang Ditampilkan...</li>
+          <li><strong>FROM:</strong> Menunjuk Tabel Sumber Data...</li>
+          <li><strong>WHERE:</strong> Menyaring Baris Berdasarkan Kondisi...</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold text-purple-300 mt-4">Konsep Penting yang Relevan:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Query:</strong> Perintah lengkap SQL...</li>
+          <li><strong>Klausa:</strong> Kata kunci seperti SELECT...</li>
+          <li><strong>Tabel:</strong> Struktur data utama...</li>
+          <li><strong>Kolom:</strong> Atribut vertikal dari data...</li>
+          <li><strong>Baris:</strong> Data horizontal...</li>
+          <li><strong>Kondisi:</strong> Ekspresi logika di WHERE...</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold text-purple-300 mt-4">Contoh Praktis yang Lebih Beragam:</h2>
+        <pre class="bg-[#1e1c4e] p-4 rounded text-sm overflow-auto"><code>-- Mengambil semua data mahasiswa dari jurusan Sistem Informasi
+        SELECT * FROM Mahasiswa WHERE jurusan = 'Sistem Informasi';
+
+        -- Mengambil nama dan IPK dari mahasiswa angkatan 2024 yang memiliki IPK di atas 3.50
+        SELECT nama, ipk FROM Mahasiswa WHERE angkatan = 2024 AND ipk > 3.50;
+
+        -- Mencari mahasiswa yang namanya mengandung kata "Pratama"
+        SELECT nama, nim, jurusan FROM Mahasiswa WHERE nama LIKE '%Pratama%';</code></pre>
+
+        
+        <h2 class="text-xl font-semibold text-purple-300 mt-4">Konsep Penting yang Relevan:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Query:</strong> Perintah lengkap SQL...</li>
+          <li><strong>Klausa:</strong> Kata kunci seperti SELECT...</li>
+          <li><strong>Tabel:</strong> Struktur data utama...</li>
+          <li><strong>Kolom:</strong> Atribut vertikal dari data...</li>
+          <li><strong>Baris:</strong> Data horizontal...</li>
+          <li><strong>Kondisi:</strong> Ekspresi logika di WHERE...</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold text-purple-300 mt-4">Contoh Praktis yang Lebih Beragam:</h2>
+        <pre class="bg-[#1e1c4e] p-4 rounded text-sm overflow-auto"><code>-- Mengambil semua data mahasiswa dari jurusan Sistem Informasi
+        SELECT * FROM Mahasiswa WHERE jurusan = 'Sistem Informasi';
+
+        -- Mengambil nama dan IPK dari mahasiswa angkatan 2024 yang memiliki IPK di atas 3.50
+        SELECT nama, ipk FROM Mahasiswa WHERE angkatan = 2024 AND ipk > 3.50;
+
+        -- Mencari mahasiswa yang namanya mengandung kata "Pratama"
+        SELECT nama, nim, jurusan FROM Mahasiswa WHERE nama LIKE '%Pratama%';</code></pre>
+
+        
+      </div>
+    </main>
+  </div>
+
+  <script>
+    let isPlaying = false;
+    let timerInterval;
+    let seconds = 0;
+
+    function updateTimerDisplay() {
+      const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const sec = String(seconds % 60).padStart(2, '0');
+      $('#timer').text(`${min} : ${sec}`);
+    }
+
+    $('#play-btn').click(function () {
+      const audio = $('#bg-audio')[0];
+      isPlaying = !isPlaying;
+
+      if (isPlaying) {
+        audio.play();
+        $(this).text('⏸️');
+        timerInterval = setInterval(() => {
+          seconds++;
+          updateTimerDisplay();
+        }, 1000);
+      } else {
+        audio.pause();
+        $(this).text('▶');
+        clearInterval(timerInterval);
+      }
+    });
+
+    const summary = document.getElementById("summary-content");
+    const progressPath = document.getElementById("progress-path");
+    const progressText = document.getElementById("progress-text");
+
+    summary.addEventListener("scroll", () => {
+        const scrollTop = summary.scrollTop;
+        const scrollHeight = summary.scrollHeight - summary.clientHeight;
+        const scrollPercent = Math.min((scrollTop / scrollHeight) * 100, 100);
+
+        // Update SVG stroke-dasharray
+        progressPath.setAttribute("stroke-dasharray", `${scrollPercent}, 100`);
+
+        // Update percentage text
+        progressText.textContent = `${Math.round(scrollPercent)}%`;
+    });
+
+  </script>
+</body>
+</html>
