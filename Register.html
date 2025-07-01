@@ -11,29 +11,25 @@
       font-family: 'Montserrat', sans-serif;
     }
     .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
     }
-
-  .fade-in.show {
-        opacity: 1;
-        transform: translateY(0);
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-  @keyframes rocketUpDown {
-    0%, 100% {
-        transform: translateY(0);
+    @keyframes rocketUpDown {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-30px);
+      }
     }
-    50% {
-        transform: translateY(-30px);
-    }
-    }
-
     .rocket {
-        animation: rocketUpDown 3s ease-in-out infinite;
+      animation: rocketUpDown 3s ease-in-out infinite;
     }
-
     @keyframes shooting-star {
       0% {
         transform: translate(0, 0) scale(1);
@@ -44,7 +40,6 @@
         opacity: 0;
       }
     }
-
     .shooting-star {
       position: absolute;
       width: 3px;
@@ -56,7 +51,7 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-[#10003c] to-[#310062] text-white min-h-screen flex flex-col md:flex-row items-center justify-between px-10 relative overflow-hidden">
+<body class="bg-gradient-to-b from-[#10003c] to-[#310062] text-white min-h-screen flex flex-col md:flex-row items-center justify-between px-4 md:px-10 relative overflow-hidden">
 
   <!-- Background Layer -->
   <div class="absolute inset-0 z-0">
@@ -64,81 +59,81 @@
   </div>
 
   <!-- Left Text Section -->
-  <div class="md:w-1/2 max-w-2xl z-10 flex flex-col justify-center items-start -mt-40 px-14">
-    <h1 class="text-5xl font-bold leading-tight">
+  <div class="w-full md:w-1/2 space-y-2 z-10 flex flex-col justify-center items-center md:items-start mt-10 md:mt-0 px-4 md:px-10 text-center md:text-left">
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">
       JOIN THE LEARNING <br />MISSION WITH US!
     </h1>
-    <p class="italic text-gray-300 text-xl mt-4">
+    <p class="italic text-gray-300 text-sm md:text-base max-w-md">
       "There is a need for a sense of adventure, a desire to explore, and the courage to discover new things." - Buzz Aldrin
     </p>
   </div>
 
   <!-- Right Form Section -->
-  <div class="bg-white text-black rounded-2xl p-10 md:p-16 shadow-lg w-full max-w-2xl space-y-6 z-20 fade-in">
+  <div class="bg-white text-black rounded-xl p-6 md:p-12 shadow-lg w-full max-w-[500px] space-y-4 z-20 fade-in min-h-[550px] flex flex-col justify-center mx-auto md:mr-10 mt-6 md:mt-0">
     <div class="flex items-center justify-center">
-      <img src="img/zlearn.png" alt="zlearn" class="h-20 w-auto" />
+      <img src="img/zlearn.png" alt="zlearn" class="h-12 w-24" />
     </div>
 
-    <h2 class="text-3xl font-semibold text-center">Start the Journey</h2>
+    <h2 class="text-xl font-semibold text-center">Start the Journey</h2>
 
     <!-- Username -->
     <div class="relative w-fit mx-auto">
       <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-        <img src="img/Email Field.png" alt="user icon" class="w-5 h-5" />
+        <img src="img/Email Field.png" alt="user icon" class="w-4 h-4" />
       </span>
-      <input type="text" placeholder="Username" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 px-10 w-full placeholder-white" />
+      <input type="text" placeholder="Username" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 pl-10 pr-4 w-full text-sm placeholder-white" />
     </div>
 
     <!-- Email -->
     <div class="relative w-fit mx-auto">
       <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-        <img src="img/email.png" alt="email icon" class="w-5 h-5" />
+        <img src="img/email.png" alt="email icon" class="w-4 h-4" />
       </span>
-      <input type="email" placeholder="Email" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 px-10 w-full placeholder-white" />
+      <input type="email" placeholder="Email" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 pl-10 pr-4 w-full text-sm placeholder-white" />
     </div>
 
     <!-- Password -->
     <div class="relative w-fit mx-auto">
       <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-        <img src="img/password.png" alt="password icon" class="w-5 h-5" />
+        <img src="img/password.png" alt="password icon" class="w-4 h-4" />
       </span>
-      <input type="password" placeholder="Password" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 px-10 w-full placeholder-white" />
+      <input type="password" placeholder="Password" class="border bg-[#10003c] text-white border-gray-300 rounded-full py-2 pl-8 pr-7 w-full text-sm placeholder-white" />
       <span class="absolute inset-y-0 right-0 pr-3 flex items-center">
-        <img src="img/hide.png" alt="toggle visibility" class="w-5 h-5 cursor-pointer" />
+        <img src="img/hide.png" alt="toggle visibility" class="w-4 h-4 cursor-pointer" />
       </span>
     </div>
 
     <!-- Confirm Password -->
     <div class="relative w-fit mx-auto">
       <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-        <img src="img/password.png" alt="confirm password icon" class="w-5 h-5" />
+        <img src="img/password.png" alt="confirm password icon" class="w-4 h-4" />
       </span>
-      <input type="password" placeholder="Confirm Password" class="bg-[#10003c] text-white border border-gray-300 rounded-full py-2 px-10 w-full placeholder-white" />
+      <input type="password" placeholder="Confirm Password" class="bg-[#10003c] text-white border border-gray-300 rounded-full py-2 pl-8 pr-7 w-full text-sm placeholder-white" />
       <span class="absolute inset-y-0 right-0 pr-3 flex items-center">
-        <img src="img/hide.png" alt="hide confirm password" class="w-5 h-5 cursor-pointer" />
+        <img src="img/hide.png" alt="hide confirm password" class="w-4 h-4 cursor-pointer" />
       </span>
     </div>
 
-    <!-- Gender Radio Buttons -->
-    <div class="flex gap-4 items-center justify-center">
-      <label class="flex items-center gap-2 px-9 py-2 bg-[#0C1D3E] rounded-full text-white cursor-pointer">
-        <input type="radio" name="gender" class="appearance-none h-4 w-4 border-2 border-white rounded-full checked:bg-white checked:border-white transition duration-200" />
+    <!-- Gender -->
+    <div class="flex gap-2 items-center justify-center text-xs">
+      <label class="flex items-center gap-2 px-7 py-1.5 bg-[#0C1D3E] rounded-full text-white cursor-pointer">
+        <input type="radio" name="gender" class="appearance-none h-3.5 w-3.5 border-2 border-white rounded-full checked:bg-white checked:border-white transition duration-200" />
         Man
       </label>
-      <label class="flex items-center gap-2 px-6 py-2 bg-[#0C1D3E] rounded-full text-white cursor-pointer">
-        <input type="radio" name="gender" class="appearance-none h-4 w-4 border-2 border-white rounded-full checked:bg-white checked:border-white transition duration-200" />
+      <label class="flex items-center gap-2 px-4 py-1.5 bg-[#0C1D3E] rounded-full text-white cursor-pointer">
+        <input type="radio" name="gender" class="appearance-none h-3.5 w-3.5 border-2 border-white rounded-full checked:bg-white checked:border-white transition duration-200" />
         Woman
       </label>
     </div>
 
     <!-- Submit Button -->
-    <button class="w-fit p-16 mx-auto flex items-center bg-gradient-to-r from-[#1B153A] to-[#310062] text-white py-2 rounded-full font-bold hover:opacity-90">
+    <a href="index.html" class="w-fit mx-auto flex items-center bg-gradient-to-b from-[#1B153A] to-[#310062] text-white py-1.5 px-10 rounded-full font-bold text-sm hover:opacity-90">
       Start
-    </button>
+    </a>
 
     <!-- Login Redirect -->
-    <div class="text-sm text-center mt-2">
-      <p class="text-black">
+    <div class="text-xs text-center">
+      <p class="mt-2 text-black">
         Already have an account?
         <a href="login.html" class="text-purple-700 font-bold">Click here</a>
       </p>
@@ -146,29 +141,26 @@
   </div>
 
   <!-- Decorative Elements -->
-  <img src="img/monnnnn.png" class="absolute top-0 right-1/4 -translate-x-1/2 w-40 md:w-60 z-10" alt="moon">
-  <img src="img/atronout terbang.png" class="absolute top-5 right-5 w-32 md:w-56 z-20" alt="ufo">
-  <img src="img/Rocket.png" class="rocket absolute bottom-20 left-20 w-40 md:w-56 z-20" alt="rocket" />
-  <img src="img/Earth.png" class="absolute bottom-0 left-0 w-40 md:w-60 z-10" alt="rocket">
+  <img src="img/monnnnn.png" class="absolute top-0 right-1/3 -translate-x-1/2 w-24 md:w-36 z-10" alt="moon">
+  <img src="img/atronout terbang.png" class="absolute top-5 right-5 w-24 md:w-40 z-20" alt="ufo">
+  <img src="img/Rocket.png" class="rocket absolute bottom-20 left-10 w-24 md:w-40 z-20" alt="rocket" />
+  <img src="img/Earth.png" class="absolute bottom-0 left-0 w-24 md:w-40 z-10" alt="earth">
 
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.fade-in').forEach(el => {
-      el.classList.add('show');
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.classList.add('show');
+      });
     });
-  });
 
-   function createStar() {
+    function createStar() {
       const star = document.createElement('div');
       star.classList.add('shooting-star');
-
       const startX = Math.random() * window.innerWidth * 0.7;
       const startY = Math.random() * window.innerHeight * 0.4;
       star.style.left = `${startX}px`;
       star.style.top = `${startY}px`;
-
       document.body.appendChild(star);
-
       star.addEventListener('animationend', () => {
         star.remove();
       });
@@ -179,7 +171,6 @@
         createStar();
       }
     }, 300);
-</script>
-
+  </script>
 </body>
 </html>
